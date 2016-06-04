@@ -12,3 +12,11 @@ test:
     - docker run -d freqout/streammachine
     - docker run -d freqout/streammachine-master
     - docker run -d freqout/streammachine-slave
+deployment:
+  hub:
+    branch: master
+    commands:
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - docker push freqout/streammachine
+      - docker push freqout/streammachine-master
+      - docker push freqout/streammachine-slave
