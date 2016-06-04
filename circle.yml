@@ -9,4 +9,6 @@ dependencies:
     - make streammachine-slave
 test:
   override:
-    - docker-compose up -d
+    - docker run -d freqout/streammachine
+    - docker run -d freqout/streammachine-master
+    - docker run -d freqout/streammachine-slave
