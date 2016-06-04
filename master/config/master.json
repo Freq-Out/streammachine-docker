@@ -1,0 +1,23 @@
+{
+    "mode": "master",
+    "source_port": 8005,
+    "master": {
+        "port": 8020,
+        "password": "super_secure_password"
+    },
+    "log": {
+        "stdout": true,
+        "level": "info"
+    },
+    "streams": {
+        "live": {
+            "key": "live",
+            "root_route": true,
+            "format": "mp3",
+            "seconds": 3600,
+            "metaTitle": "Live Broadcast",
+            "host": "localhost",
+            "source_password": "live"
+        }
+    }
+}

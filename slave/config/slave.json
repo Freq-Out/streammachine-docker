@@ -1,0 +1,12 @@
+{
+    "mode": "slave",
+    "slave": {
+        "master": "ws://streammachine-master:8020?password=super_secure_password"
+    },
+    "cluster": 1,
+    "port": 80,
+    "log": {
+        "stdout": true,
+        "level": "info"
+    }
+}

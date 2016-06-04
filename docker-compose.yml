@@ -1,0 +1,12 @@
+version: '2'
+services:
+  streammachine-master:
+    image: freqout/streammachine-master
+    ports:
+      - "8000-8020:8000-8020"
+  streammachine-slave:
+    image: freqout/streammachine-slave
+    ports:
+      - "80:80"
+    links:
+      - streammachine-master
